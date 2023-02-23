@@ -3,7 +3,11 @@
   "author": {
     "name": "ZebLuo"
   },
+<<<<<<< HEAD
   "version": "1.0.5",
+=======
+  "version": "1.0.4",
+>>>>>>> 1c14172ba9e46adfe81134cc9a411889ceeb5fe9
   "deprecated": false,
   "bundleDependencies": false,
   "license": "MIT",
