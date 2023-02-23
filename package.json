@@ -1,0 +1,22 @@
+{
+  "name": "goldfinger-plugin",
+  "author": {
+    "name": "ZebLuo"
+  },
+  "version": "1.0.5",
+  "deprecated": false,
+  "bundleDependencies": false,
+  "license": "MIT",
+  "main": "index.js",
+  "description": "plugin developed for hw",
+  "keywords": [
+    "webpack",
+    "goldfinger"
+  ],
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "node-ssh": "^13.0.0",
+    "readline-sync": "^1.4.10",
+    "single-line-log": "^1.1.2"
+  }
+}
