@@ -79,7 +79,7 @@ class Goldfinger {
                         console.log(chalk.red('警告:打包后的config.js中含有外网IP地址'))
                         readline.question("Enter any key to continue:");
                         this.handlerRemote(outputPath)
-                    }esle{
+                    }else{
                         this.handlerRemote(outputPath)
                     }
                 }catch(err) {
