@@ -59,6 +59,7 @@ class Goldfinger {
   async handler(outputPath) {
     fs.readFile(outputPath + "/config/config.js", "utf-8", (err, data) => {
       if (err) console.log(chalk.red("读取文件错误,无法检验config文件内IP"))
+      let isLocation = data.indexOf('location.') !== -1
       data = data
         .replace(/(window.config)/g, "var config")
         .replace(/\$\{.*window\..*\}/g, "")
@@ -73,6 +74,9 @@ class Goldfinger {
         .replace(/window/g, "global")
       eval(`
                 try{
+                  if(isLocation) {
+                    this.handlerRemote(outputPath)
+                  }else{
                     ${data}
                     let isInternet = this.findUrls(global.config)
                     if(isInternet.length&&this.options.detect !== false){
@@ -82,6 +86,7 @@ class Goldfinger {
                     }else{
                         this.handlerRemote(outputPath)
                     }
+                  }
                 }catch(err) {
                     console.log(chalk.red('警告:格式错误 无法检测config', err))
                 }

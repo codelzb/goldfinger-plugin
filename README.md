@@ -13,6 +13,7 @@ module.exports={
     module:{
         plugins:[
              // 检测打包后的config.js文件中是否包含外网IP地址
+             // 如果config中包含'location.'字段 则默认为开发者已进行判断会直接通过
             new GoldfingerPlugin({
               detect: true,  //boolean类型,为false则不检测 反之检测 默认为true,
               // 可以省略RegExp参数,因为它拥有默认值 也可支持自定义检测IP的正则表达式
