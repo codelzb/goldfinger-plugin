@@ -89,6 +89,7 @@ class Goldfinger {
                   }
                 }catch(err) {
                     console.log(chalk.red('警告:格式错误 无法检测config', err))
+                    readline.question("Enter any key to continue:");
                 }
             `)
     })
